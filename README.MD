@@ -1,6 +1,6 @@
 # User Authentication System with Department Routing, SQL Database, and Splunk SIEM Logging
 
-This is a full stack authentication system that securely manages user login and signup while integrating with a SIEM platform for real time security monitoring. 
+This is a full stack authentication system that securely manages user login and signup, and redirects users based on signup information while integrating with a SIEM platform for real time security monitoring. 
 
 The system logs authentication events in a structured JSON format and visualizes them using dashboards in Splunk.
 
