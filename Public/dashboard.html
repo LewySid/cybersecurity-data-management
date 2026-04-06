@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h1 id="welcomeMessage">Welcome</h1>
+    <p id="departmentMessage"></p>
+
+    <a href="/login.html">Back to Login</a>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const dept = params.get("dept");
+    const name = params.get("name");
+
+    const welcomeMessage = document.getElementById("welcomeMessage");
+    const departmentMessage = document.getElementById("departmentMessage");
+
+    if (name && dept) {
+    welcomeMessage.textContent = `Welcome, ${name}`;
+    departmentMessage.textContent = `You are now in the ${dept} department dashboard.`;
+    } else {
+    welcomeMessage.textContent = "Welcome";
+    departmentMessage.textContent = "No department information found.";
+    }
+</script>
+</body>
+</html>
